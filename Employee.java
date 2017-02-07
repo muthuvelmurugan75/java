@@ -1,24 +1,12 @@
 package com.Murugan.www;
 
-public class Constructor {
+public class Employee {
 
-	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		
-		
-		
-		Constructor in=new Constructor();
-		
-		
-		
-		
-		Constructorin up=new Constructorin();
-		up.getClass();
-		
-		
 
+		String in="muthuvel";
+		System.out.println(in);
 		
 		
 		
@@ -28,8 +16,6 @@ public class Constructor {
 		
 		
 		
-		
-	}
 		
 		
 		
@@ -43,4 +29,4 @@ public class Constructor {
 		
 	}
 
-
+}
