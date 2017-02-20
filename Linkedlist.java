@@ -1,21 +1,23 @@
-package com.Murugan.www;
+package com.Murugan;
 
 import java.util.LinkedList;
-import java.util.Stack;
-import java.util.Vector;
 
 public class Linkedlist {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		LinkedList ll=new LinkedList();
-		Vector v=new Vector();
-		Stack s=new Stack();
-		
-		
-		
-		
+		ll.add( "muthuvel");
+		ll.add( "jos");
+		ll.add( "vel");
+		ll.add( "master");
+		ll.add( "palviyabari");
+		System.out.println(ll);
+		ll.remove(4);
+
+		System.out.println(ll);
+		System.out.println("after");
+		System.out.println(ll.get(4));
 	}
 
 }
