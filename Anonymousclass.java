@@ -1,25 +1,19 @@
-package com.muthuvel.www;
+package com.work.www;
+interface players{
+	void indians();
+}
 
 public class Anonymousclass {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		
-		Anonymousclass in=new Anonymousclass()
+		players p=new players(){
+			public void indians(){
+				System.out.println("good play");
 				
-				{
-			
-			void add(){
-				System.out.println("hi da");
-			
 			}
-				};
-				
-				
-				
-				}
-		
+		};
+		p.indians();
+
 	}
 
-
+}
