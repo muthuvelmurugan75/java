@@ -1,0 +1,43 @@
+package Implement;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import Dbconnection.ConnectionQuery;
+
+public class Ref {
+	static Connection conn=null;
+	public static int countRows() throws SQLException {
+		conn=ConnectionQuery.create();
+	
+	    // select the number of rows in the table
+	    Statement stmt = null;
+	    ResultSet rs = null;
+	    int rowCount = -1;
+	    try {
+	      stmt = conn.createStatement();
+	      rs = stmt.executeQuery("SELECT COUNT(*) FROM aadhar.status_count");
+	      // get the number of rows from the result set
+	      rs.next();
+	      rowCount = rs.getInt(1);
+	    } finally {
+	      rs.close();
+	      stmt.close();
+	    }
+	    return rowCount;
+	  }
+	
+	
+	public static void main(String[] args) {
+		
+		try {
+			int t=Ref.countRows();
+			System.out.println("=================="+t);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}
